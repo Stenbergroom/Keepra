@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Theme colors-->
+    <color name="theme_default_primary">#3F51B5</color>
+    <color name="theme_default_primary_dark">#303F9F</color>
+    <color name="theme_accent">#FF3D00</color>
+    <color name="theme_accent_a100">#FF9E80</color>
+    <color name="theme_window_background">#C5CAE9</color>
+
+    <!--General text color-->
+    <color name="text">#212121</color>
+    <color name="secondary">#727272</color>
+    <color name="hint">#B8B8B8</color>
+    <color name="dividers">#DADADA</color>
+
+    <!--General colors for drawer-->
+    <color name="list_background">#F2F2F2</color>
+    <!--Primary colors for drawer-->
+    <color name="list_background_normal">#FCFCFC</color>
+    <!--Secondary colors for drawer-->
+    <color name="list_background_secondary_normal">#F2F2F2</color>
+</resources>
