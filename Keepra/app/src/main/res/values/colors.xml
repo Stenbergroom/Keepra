@@ -19,4 +19,5 @@
     <color name="list_background_normal">#FCFCFC</color>
     <!--Secondary colors for drawer-->
     <color name="list_background_secondary_normal">#F2F2F2</color>
+
 </resources>
