@@ -8,9 +8,30 @@
               android:layout_height="match_parent"
               tools:context=".MainActivity">
 
-    <include>
-
+    <include
+            layout="@layout/include_toolbar"
+            android:id="@+id/toolbar">
     </include>
+
+    <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:pstsIndicatorColor="@color/theme_accent"
+            app:pstsTextColorSelected="@color/theme_accent"
+            app:pstsIndicatorHeight="3dp"
+            android:textColor="@color/text"
+            android:fillViewport="false">
+    </com.astuetz.PagerSlidingTabStrip>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/theme_accent_a100">
+    </android.support.v4.view.ViewPager>
 
 
 </LinearLayout>
