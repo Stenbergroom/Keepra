@@ -10,7 +10,7 @@ import com.stenbergroom.keepra.app.CardFragment;
  */
 public class MyPagerAdapter extends FragmentPagerAdapter {
 
-    private final String[] TABS_TITLES = {"Все", "Выполненные", "Календарь", "Список"};
+    private final String[] TABS_TITLES = {"Все кипы", "Выполненные", "Календарь", "Список"};
 
     public MyPagerAdapter(FragmentManager fm) {
         super(fm);
