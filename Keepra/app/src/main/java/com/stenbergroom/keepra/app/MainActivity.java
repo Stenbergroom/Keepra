@@ -30,5 +30,6 @@ public class MainActivity extends ActionBarActivity {
 
         PagerSlidingTabStrip tabs = (PagerSlidingTabStrip)findViewById(R.id.tabs);
         tabs.setViewPager(pager);
+        // TODO change structure in carbs, colors in tabs
     }
 }
