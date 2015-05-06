@@ -12,14 +12,14 @@ import com.stenbergroom.keepra.app.adapter.MyPagerAdapter;
 
 public class MainActivity extends ActionBarActivity {
 
-    @InjectView(R.id.toolbar)
-    Toolbar toolbar;
+/*    @InjectView(R.id.toolbar)
+    Toolbar toolbar;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+/*        ButterKnife.inject(this);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Keepra");
@@ -29,6 +29,6 @@ public class MainActivity extends ActionBarActivity {
         pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
 
         PagerSlidingTabStrip tabs = (PagerSlidingTabStrip)findViewById(R.id.tabs);
-        tabs.setViewPager(pager);
+        tabs.setViewPager(pager);*/
     }
 }
