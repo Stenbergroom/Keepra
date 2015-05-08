@@ -1,3 +1,16 @@
 <resources>
+
     <string name="app_name">Keepra</string>
+
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_detail_title">Detail Activity</string>
+    <string name="drawer_switch">SwitchSample</string>
+    <string name="drawer_opensource">Open Source</string>
+
+    <string name="dialog_nointernet">No internet connection</string>
+    <string name="dialog_uploading">Progress Sample&#8230;</string>
+    <string name="dialog_processingandupploading">Showing a sample progress. Please be patient! (This does nothing. Just waiting 100ms / application)</string>
+
 </resources>
