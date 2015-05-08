@@ -3,9 +3,8 @@
     <!--Theme colors-->
     <color name="theme_default_primary">#3F51B5</color>
     <color name="theme_default_primary_dark">#303F9F</color>
-<!--    <color name="theme_accent">#FF6E40</color>-->
     <color name="theme_window_background">#C5CAE9</color>
-    <color name="theme_accent">#448AFF</color>
+    <color name="theme_accent">#FF1744</color>
 
     <!--General text color-->
     <color name="text">#212121</color>
