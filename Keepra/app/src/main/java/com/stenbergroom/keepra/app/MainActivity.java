@@ -44,10 +44,15 @@ public class MainActivity extends ActionBarActivity {
 
     private static UploadHelper.UploadComponentInfoTask uploadComponentInfoTask = null;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /////////////////////////////////////////////////////////////////////////////////////////
+
+        /////////////////////////////////////////////////////////////////////////////////////////
 
         Log.d(LOG_TAG, " - MainActivity.onCreate");
 
