@@ -158,7 +158,8 @@ public class MainActivity extends ActionBarActivity {
         Intent i = new Intent(this, DetailActivity.class);
         i.putExtra("appInfo", appInfo.getComponentName());
 
-        ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(this, Pair.create((View) mFabButton, "fab"), Pair.create(appIcon, "appIcon"));
+        // animation fab, icon
+        ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(this, Pair.create((View) mFabButton, "fab"));
         startActivity(i, transitionActivityOptions.toBundle());
     }
 

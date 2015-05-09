@@ -68,7 +68,6 @@
             android:layout_height="@dimen/fab_size"
             android:transitionName="fab"
             android:background="@drawable/button_round"
-            android:stateListAnimator="@anim/fab_anim"
             android:elevation="8dp"
             android:padding="14dp"
             android:scaleType="fitCenter"
