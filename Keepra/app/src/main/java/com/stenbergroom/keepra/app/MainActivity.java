@@ -50,10 +50,6 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /////////////////////////////////////////////////////////////////////////////////////////
-
-        /////////////////////////////////////////////////////////////////////////////////////////
-
         Log.d(LOG_TAG, " - MainActivity.onCreate");
 
         // Handle Toolbar

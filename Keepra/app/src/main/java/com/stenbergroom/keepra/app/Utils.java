@@ -20,8 +20,6 @@ public class Utils {
         w.setEnterTransition(ex);
     }*/
 
-    private static final String LOG_TAG = "LOG_TAG";
-
     public static void configureFab(View fabButton){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             fabButton.setOutlineProvider(new ViewOutlineProvider() {
