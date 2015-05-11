@@ -13,13 +13,6 @@ import android.widget.ImageView;
  */
 public class Utils {
 
-/*    public static void configureWindowEnterExitTransition(Window w){
-        Explode ex = new Explode();
-        ex.setInterpolator(new PathInterpolator(0.4f, 0, 1, 1));
-        w.setExitTransition(ex);
-        w.setEnterTransition(ex);
-    }*/
-
     public static void configureFab(View fabButton){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             fabButton.setOutlineProvider(new ViewOutlineProvider() {
