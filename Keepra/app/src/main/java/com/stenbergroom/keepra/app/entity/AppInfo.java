@@ -21,8 +21,6 @@ import java.util.Locale;
  */
 public class AppInfo implements Comparable<Object> {
 
-    private static final String LOG_TAG = "LOG_TAG";
-
     private Context ctx;
     private ResolveInfo ri;
     private ComponentName componentName = null;
@@ -37,7 +35,6 @@ public class AppInfo implements Comparable<Object> {
 
         this.componentName = new ComponentName(ri.activityInfo.applicationInfo.packageName, ri.activityInfo.name);
 
-        Log.d(LOG_TAG, " - AppInfo");
         try {
             pi = ctx.getPackageManager().getPackageInfo(getPackageName(), 0);
         }catch (PackageManager.NameNotFoundException e){
