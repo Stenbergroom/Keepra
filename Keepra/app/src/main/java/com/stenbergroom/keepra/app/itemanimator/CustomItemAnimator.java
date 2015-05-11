@@ -4,7 +4,6 @@ import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
@@ -16,14 +15,12 @@ import java.util.List;
  */
 public class CustomItemAnimator extends RecyclerView.ItemAnimator {
 
-    private static final String LOG_TAG = "LOG_TAG";
 
     List<RecyclerView.ViewHolder> mPendingAdd = new ArrayList<RecyclerView.ViewHolder>();
     List<RecyclerView.ViewHolder> mPendingRemove = new ArrayList<RecyclerView.ViewHolder>();
 
     @Override
     public void runPendingAnimations() {
-        Log.d(LOG_TAG, " - CustomItemAnimator.runPendingAnimations");
         int animationDuration = 300; // was 300
         if(!mPendingAdd.isEmpty()){
             for(final RecyclerView.ViewHolder viewHolder : mPendingAdd){
