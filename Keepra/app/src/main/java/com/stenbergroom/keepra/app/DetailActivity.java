@@ -11,7 +11,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewPropertyAnimator;
 import android.widget.ImageButton;
@@ -31,8 +30,6 @@ import java.util.Date;
  */
 public class DetailActivity extends ActionBarActivity {
 
-    private static final String LOG_TAG = "LOG_TAG";
-
     private static final int SCALE_DELAY = 30; // was 30
 
     private Toolbar toolbar;
@@ -43,7 +40,6 @@ public class DetailActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        Log.d(LOG_TAG, " - DetailActivity.onCreate");
 
         // Utils.configureWindowEnterExitTransaction(getWindow());
 
@@ -118,7 +114,6 @@ public class DetailActivity extends ActionBarActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        Log.d(LOG_TAG, " - DetailActivity.onSaveInstanceState");
         outState.putParcelable("appInfo", appInfo.getComponentName());
         super.onSaveInstanceState(outState);
     }
@@ -131,7 +126,6 @@ public class DetailActivity extends ActionBarActivity {
     };
 
     public void fillRow(View view, final String title, final String description){
-        Log.d(LOG_TAG, " - DetailActivity.fillRow");
         TextView titleView = (TextView)view.findViewById(R.id.title);
         titleView.setText(title);
 
@@ -155,7 +149,6 @@ public class DetailActivity extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
-        Log.d(LOG_TAG, " - DetailActivity.onBackPressed");
 
         for(int i = rowContainer.getChildCount() - 1; i > 0; i--){
 
