@@ -32,8 +32,6 @@ import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
 
-    private static final String LOG_TAG = "LOG_TAG";
-
     private List<AppInfo> applicationList = new ArrayList<AppInfo>();
 
     private ApplicationAdapter mAdapter;
@@ -49,8 +47,6 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Log.d(LOG_TAG, " - MainActivity.onCreate");
 
         // Handle Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -72,31 +68,6 @@ public class MainActivity extends ActionBarActivity {
 
         // Handle ProgressBar
         mProgressBar = (ProgressBar)findViewById(R.id.progressBar);
-
-        // Init DrawerElems NOTE Just don't do this in live app :D
-        final SharedPreferences pref = getSharedPreferences("com.mikepenz.applicationreader", 0);
-        ((Switch)mDrawerList.findViewById(R.id.drawer_autoupload)).setChecked(pref.getBoolean("autouploadenabled", false));
-        ((Switch)mDrawerList.findViewById(R.id.drawer_autoupload)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                SharedPreferences.Editor editor = pref.edit();
-                editor.putBoolean("autouploadenabled", isChecked);
-                editor.apply();
-            }
-        });
-
-        mDrawerList.findViewById(R.id.drawer_opensource).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new Libs.Builder()
-                        .withFields(R.string.class.getFields())
-                        .withVersionShown(true)
-                        .withLicenseShown(true)
-                        .withActivityTitle(getString(R.string.drawer_opensource))
-                        .withActivityTheme(R.style.AboutTheme)
-                        .start(MainActivity.this);
-            }
-        });
 
         ((ImageView)mDrawerList.findViewById(R.id.drawer_opensource_icon)).setImageDrawable(new IconicsDrawable(this, FontAwesome.Icon.faw_github).colorRes(R.color.secondary).actionBarSize());
 
@@ -120,7 +91,6 @@ public class MainActivity extends ActionBarActivity {
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                Log.d(LOG_TAG, " - MainActivity.onCreate.onRefreshListener.onRefresh");
                 new InitializeApplicationTask().execute();
             }
         });
@@ -142,7 +112,6 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        Log.d(LOG_TAG, " - MainActivity.onSaveInstanceState");
         super.onSaveInstanceState(outState);
     }
 
@@ -154,7 +123,6 @@ public class MainActivity extends ActionBarActivity {
     };
 
     public void animateActivity(AppInfo appInfo, View appIcon){
-        Log.d(LOG_TAG, " - MainActivity.animateActivity");
         Intent i = new Intent(this, DetailActivity.class);
         i.putExtra("appInfo", appInfo.getComponentName());
 
@@ -167,14 +135,12 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         protected void onPreExecute() {
-            Log.d(LOG_TAG, " - MainActivity.InitializeApplicationTask.onPreExecute");
             mAdapter.clearApplications();
             super.onPreExecute();
         }
 
         @Override
         protected Void doInBackground(Void... params) {
-            Log.d(LOG_TAG, " - MainActivity.InitializeApplicationTask.doInBackground");
             applicationList.clear();
 
             //Query the applications
@@ -197,7 +163,6 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            Log.d(LOG_TAG, " - MainActivity.InitializeApplicationTask.onPostExecute");
             // Handle visibility
             mRecyclerView.setVisibility(View.VISIBLE);
             mProgressBar.setVisibility(View.GONE);
