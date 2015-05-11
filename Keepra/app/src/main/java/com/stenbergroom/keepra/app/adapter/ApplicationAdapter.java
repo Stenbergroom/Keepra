@@ -18,8 +18,6 @@ import java.util.List;
  */
 public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.ViewHolder> {
 
-    private static final String LOG_TAG = "LOG_TAG";
-
     private List<AppInfo> applications;
     private int rowLayout;
     private MainActivity mAct;
@@ -28,7 +26,6 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
         this.applications = applications;
         this.rowLayout = rowLayout;
         this.mAct = act;
-        Log.d(LOG_TAG, " - ApplicationAdapter");
     }
 
     public void clearApplications(){
