@@ -17,8 +17,6 @@ import java.util.List;
  */
 public class UploadHelper {
 
-    private static final String LOG_TAG = "LOG_TAG";
-
     private static UploadHelper instance = null;
     private ActionBarActivity act;
     private List<AppInfo> applicationList = new ArrayList<AppInfo>();
@@ -34,7 +32,6 @@ public class UploadHelper {
     }
 
     public static UploadHelper getInstance(ActionBarActivity act, List<AppInfo> applicationList){
-        Log.d(LOG_TAG, " - UploadHelper.getInstance");
         if(instance == null){
             instance = new UploadHelper(act, applicationList);
         }else if(act != null){
@@ -61,7 +58,6 @@ public class UploadHelper {
         public boolean isRunning = false;
 
         public void showProgress(Activity act){
-            Log.d(LOG_TAG, " - UploadHelper.UploadComponentInfoTask.showProgress");
             mProgressDialog = new ProgressDialog(act);
             mProgressDialog.setTitle(R.string.dialog_uploading);
             mProgressDialog.setMessage(act.getString(R.string.dialog_processingandupploading));
@@ -75,7 +71,6 @@ public class UploadHelper {
 
         @Override
         protected void onPreExecute() {
-            Log.d(LOG_TAG, " - UploadHelper.UploadComponentInfoTask.onPreExecute");
             if(!Network.isAvailiable(act)){
                 this.cancel(true);
                 Snackbar.with(act).text(act.getString(R.string.dialog_nointernet)).show(act);
@@ -90,7 +85,6 @@ public class UploadHelper {
 
         @Override
         protected Boolean doInBackground(AppInfo... params) {
-            Log.d(LOG_TAG, " - UploadHelper.UploadComponentInfoTask.doInBackground");
             boolean updateRequired = false;
             if(params == null || params.length == 0){
                 mProgressDialog.setMax(applicationList.size());
@@ -114,7 +108,6 @@ public class UploadHelper {
 
         @Override
         protected void onPostExecute(Boolean updateRequired) {
-            Log.d(LOG_TAG, " - UploadHelper.UploadComponentInfoTask.onPostExecute");
             isRunning = false;
 
             if(mProgressDialog != null){
@@ -125,7 +118,6 @@ public class UploadHelper {
 
         @Override
         protected void onProgressUpdate(Integer... values) {
-            Log.d(LOG_TAG, " - UploadHelper.UploadComponentInfoTask.onProgressUpdate");
             if(values.length > 0 && mProgressDialog != null){
                 mProgressDialog.setProgress(values[0]);
             }
@@ -133,7 +125,6 @@ public class UploadHelper {
         }
 
         public boolean postData(){
-            Log.d(LOG_TAG, " - UploadHelper.UploadComponentInfoTask.postData");
             try{
                 Thread.sleep(100);
             }catch (Exception ex){
