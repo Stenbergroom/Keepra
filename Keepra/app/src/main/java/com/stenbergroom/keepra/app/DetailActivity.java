@@ -43,8 +43,6 @@ public class DetailActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        // Utils.configureWindowEnterExitTransaction(getWindow());
-
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
@@ -60,14 +58,6 @@ public class DetailActivity extends ActionBarActivity {
 
         // Row Container
         rowContainer = (LinearLayout)findViewById(R.id.row_container);
-
-        // Fab Button
-        FloatingActionsMenu fabButton = (FloatingActionsMenu)findViewById(R.id.fab_button);
-/*        fabButton.setImageDrawable(new IconicsDrawable(this, FontAwesome.Icon.faw_upload).color(Color.WHITE).actionBarSize());
-        fabButton.setOnClickListener(fabClickListener);
-        Utils.configureFab(fabButton);*/
-
-        //getWindow().getEnterTransition().removeListener(this);
 
         for(int i = 0; i < rowContainer.getChildCount(); i++){
             View rowView = rowContainer.getChildAt(i);
@@ -119,13 +109,6 @@ public class DetailActivity extends ActionBarActivity {
         outState.putParcelable("appInfo", appInfo.getComponentName());
         super.onSaveInstanceState(outState);
     }
-
-    View.OnClickListener fabClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            UploadHelper.getInstance(DetailActivity.this, null).upload(appInfo);
-        }
-    };
 
     public void fillRow(View view, final String title, final String description){
         TextView titleView = (TextView)view.findViewById(R.id.title);

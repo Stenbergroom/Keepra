@@ -32,7 +32,6 @@ public class MainActivity extends ActionBarActivity {
     private List<AppInfo> applicationList = new ArrayList<AppInfo>();
 
     private ApplicationAdapter mAdapter;
-    /*private ImageButton mFabButton;*/
     private FloatingActionsMenu mFabButton;
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mSwipeRefreshLayout;
@@ -71,14 +70,10 @@ public class MainActivity extends ActionBarActivity {
 
         // Fab Button
         mFabButton = (FloatingActionsMenu)findViewById(R.id.fab_button);
-/*        mFabButton.setImageDrawable(new IconicsDrawable(this, FontAwesome.Icon.faw_upload).color(Color.WHITE).actionBarSize());
-        mFabButton.setOnClickListener(fabClickListener);
-        com.stenbergroom.keepra.app.Utils.configureFab(mFabButton);*/
 
         mRecyclerView = (RecyclerView)findViewById(R.id.list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setItemAnimator(new CustomItemAnimator());
-        //mRecyclerView.setItemAnimator(new ReboundItemAnimator());
 
         mAdapter = new ApplicationAdapter(new ArrayList<AppInfo>(), R.layout.row_application, MainActivity.this);
         mRecyclerView.setAdapter(mAdapter);
@@ -112,13 +107,6 @@ public class MainActivity extends ActionBarActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
     }
-
-    View.OnClickListener fabClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            uploadComponentInfoTask = UploadHelper.getInstance(MainActivity.this, applicationList).uploadAll();
-        }
-    };
 
     public void animateActivity(AppInfo appInfo, View appIcon){
         Intent i = new Intent(this, DetailActivity.class);
