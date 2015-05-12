@@ -3,10 +3,10 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="#B2000000"/>
     <padding
-            android:left="16dp"
-            android:right="16dp"
-            android:bottom="16dp"
-            android:top="4dp">
+            android:left="8dp"
+            android:right="8dp"
+            android:bottom="8dp"
+            android:top="8dp">
     </padding>
     <corners android:radius="2dp"/>
 </shape>
