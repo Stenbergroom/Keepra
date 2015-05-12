@@ -74,15 +74,16 @@
                 <com.getbase.floatingactionbutton.FloatingActionsMenu
                         android:id="@+id/fab_button"
                         android:transitionName="fab"
-                        android:layout_width="@dimen/fab_size"
-                        android:layout_height="@dimen/fab_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
                         android:layout_marginBottom="@dimen/activity_vertical_margin"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
+                        android:elevation="8dp"
                         app:fab_addButtonColorNormal="#FF1744"
-                        app:fab_addButtonColorPressed="#FF1744"
+                        app:fab_addButtonColorPressed="@color/theme_accent"
                         app:fab_addButtonPlusIconColor="@android:color/white"
                         app:fab_labelStyle="@style/menu_labels_style"
                         android:scaleType="fitCenter">
@@ -92,9 +93,9 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/action_a"
                         app:fab_icon="@drawable/ic_fab_star"
-                        app:fab_colorNormal="#e91e63"
-                        app:fab_colorPressed="#ec407a"
-                        app:fab_title="Action A"
+                        app:fab_colorNormal="@color/theme_accent"
+                        app:fab_colorPressed="@color/theme_accent"
+                        app:fab_title="Напоминание"
                         app:fab_size="mini">
                 </com.getbase.floatingactionbutton.FloatingActionButton>
 
@@ -103,9 +104,9 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/action_b"
                         app:fab_icon="@drawable/ic_fab_star"
-                        app:fab_colorNormal="#FF22"
-                        app:fab_colorPressed="#FF25"
-                        app:fab_title="Action B"
+                        app:fab_colorNormal="@color/theme_accent"
+                        app:fab_colorPressed="@color/theme_accent"
+                        app:fab_title="Список"
                         app:fab_size="mini">
                 </com.getbase.floatingactionbutton.FloatingActionButton>
 

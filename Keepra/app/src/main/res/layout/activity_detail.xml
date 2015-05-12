@@ -86,13 +86,14 @@
             android:layout_height="@dimen/fab_size"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="-28dp"
             android:layout_below="@+id/toolbar"
+            android:layout_marginTop="-50dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            app:fab_addButtonColorNormal="#FF1744"
-            app:fab_addButtonColorPressed="#FF1744"
-            app:fab_addButtonPlusIconColor="@android:color/white"
-            app:fab_labelStyle="@style/menu_labels_style">
+            android:scaleType="fitCenter"
+            android:elevation="8dp"
+            app:fab_addButtonColorNormal="@color/theme_accent"
+            app:fab_addButtonColorPressed="@color/theme_accent"
+            app:fab_addButtonPlusIconColor="@android:color/white">
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </RelativeLayout>
