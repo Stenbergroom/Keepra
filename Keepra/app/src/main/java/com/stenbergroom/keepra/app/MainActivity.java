@@ -18,6 +18,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.mikepenz.aboutlibraries.Libs;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.iconics.typeface.FontAwesome;
@@ -35,7 +37,8 @@ public class MainActivity extends ActionBarActivity {
     private List<AppInfo> applicationList = new ArrayList<AppInfo>();
 
     private ApplicationAdapter mAdapter;
-    private ImageButton mFabButton;
+    /*private ImageButton mFabButton;*/
+    private FloatingActionsMenu mFabButton;
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private ProgressBar mProgressBar;
@@ -72,10 +75,10 @@ public class MainActivity extends ActionBarActivity {
         ((ImageView)mDrawerList.findViewById(R.id.drawer_opensource_icon)).setImageDrawable(new IconicsDrawable(this, FontAwesome.Icon.faw_github).colorRes(R.color.secondary).actionBarSize());
 
         // Fab Button
-        mFabButton = (ImageButton)findViewById(R.id.fab_button);
-        mFabButton.setImageDrawable(new IconicsDrawable(this, FontAwesome.Icon.faw_upload).color(Color.WHITE).actionBarSize());
+        mFabButton = (FloatingActionsMenu)findViewById(R.id.fab_button);
+/*        mFabButton.setImageDrawable(new IconicsDrawable(this, FontAwesome.Icon.faw_upload).color(Color.WHITE).actionBarSize());
         mFabButton.setOnClickListener(fabClickListener);
-        com.stenbergroom.keepra.app.Utils.configureFab(mFabButton);
+        com.stenbergroom.keepra.app.Utils.configureFab(mFabButton);*/
 
         mRecyclerView = (RecyclerView)findViewById(R.id.list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));

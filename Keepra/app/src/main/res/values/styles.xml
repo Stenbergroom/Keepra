@@ -29,5 +29,10 @@
         <item name="colorAccent">@color/theme_accent</item>
     </style>
 
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label</item>
+        <item name="android:textColor">#fafafa</item>
+    </style>
+
 
 </resources>

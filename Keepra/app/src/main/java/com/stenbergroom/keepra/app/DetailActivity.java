@@ -17,6 +17,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.nispok.snackbar.Snackbar;
@@ -60,10 +62,10 @@ public class DetailActivity extends ActionBarActivity {
         rowContainer = (LinearLayout)findViewById(R.id.row_container);
 
         // Fab Button
-        ImageButton fabButton = (ImageButton)findViewById(R.id.fab_button);
-        fabButton.setImageDrawable(new IconicsDrawable(this, FontAwesome.Icon.faw_upload).color(Color.WHITE).actionBarSize());
+        FloatingActionsMenu fabButton = (FloatingActionsMenu)findViewById(R.id.fab_button);
+/*        fabButton.setImageDrawable(new IconicsDrawable(this, FontAwesome.Icon.faw_upload).color(Color.WHITE).actionBarSize());
         fabButton.setOnClickListener(fabClickListener);
-        Utils.configureFab(fabButton);
+        Utils.configureFab(fabButton);*/
 
         //getWindow().getEnterTransition().removeListener(this);
 
