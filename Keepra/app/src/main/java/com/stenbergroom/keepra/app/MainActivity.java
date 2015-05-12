@@ -62,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout.setDrawerListener(actionBarDrawerToggle);
 
         // Handle DrawerList
-        LinearLayout mDrawerList = (LinearLayout)findViewById(R.id.drawerList);
+        LinearLayout mDrawerList = (LinearLayout)findViewById(R.id.drawer_left);
 
         // Handle ProgressBar
         mProgressBar = (ProgressBar)findViewById(R.id.progressBar);

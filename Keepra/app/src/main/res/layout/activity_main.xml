@@ -100,7 +100,7 @@
         </RelativeLayout>
 
         <LinearLayout
-                android:id="@+id/drawerList"
+                android:id="@+id/drawer_left"
                 android:paddingTop="24dp"
                 android:layout_width="@dimen/drawer_width"
                 android:layout_height="match_parent"
@@ -177,7 +177,7 @@
         <!-- Right Drawer -->
 
         <LinearLayout
-                android:id="@+id/drawerList_right"
+                android:id="@+id/drawer_right"
                 android:paddingTop="24dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
