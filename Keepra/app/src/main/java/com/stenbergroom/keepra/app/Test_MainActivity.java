@@ -24,7 +24,7 @@ public class Test_MainActivity extends ActionBarActivity {
 
     private List<Test_TaskInfo> tasksList = new ArrayList<Test_TaskInfo>();
 
-    private Test_CustomAdapter adapter;
+    private Test_CustomAdapter mAdapter;
     private FloatingActionsMenu fabMenu;
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mSwipeRefreshLayout;
@@ -54,6 +54,6 @@ public class Test_MainActivity extends ActionBarActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setItemAnimator(new Test_CustomItemAnimator());
 
-
+        mAdapter = new Test_CustomAdapter(new ArrayList<Test_TaskInfo>(), R.layout.)
     }
 }
