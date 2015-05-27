@@ -56,5 +56,6 @@ public class Test_MainActivity extends ActionBarActivity {
 
         mAdapter = new Test_CustomAdapter(new ArrayList<Test_TaskInfo>(), R.layout.test_row_task, Test_MainActivity.this);
         mRecyclerView.setAdapter(mAdapter);
+
     }
 }
