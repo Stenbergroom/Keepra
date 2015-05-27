@@ -9,7 +9,7 @@
         android:icon="@drawable/ic_launcher"
         android:theme="@style/AppTheme">
         <activity
-                android:name=".MainActivity"
+                android:name=".Test_MainActivity"
                 android:configChanges="orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
 
-        <activity
+        <!--<activity
                 android:name=".DetailActivity"
                 android:label="@string/activity_detail_title">
-        </activity>
+        </activity>-->
 
     </application>
 

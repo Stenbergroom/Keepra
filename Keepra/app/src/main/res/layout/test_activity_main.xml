@@ -23,9 +23,6 @@
                 android:paddingTop="24dp"
                 android:elevation="4dp"
                 android:transitionName="actionBar"/>
-        <!--        android:minHeight="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"-->
-        <!--android:paddingTop="@dimen/tool_bar_top_padding"-->
 
         <FrameLayout
                 android:layout_below="@id/toolbar"
@@ -75,24 +72,12 @@
                 android:scaleType="fitCenter">
 
             <com.getbase.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/add_task"
+                    android:id="@+id/new_task"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:fab_icon="@drawable/ic_fab_star"
                     app:fab_colorNormal="@color/accent"
                     app:fab_colorPressed="@color/accent_light"
-                    app:fab_title="Напоминание"
-                    app:fab_size="mini">
-            </com.getbase.floatingactionbutton.FloatingActionButton>
-
-            <com.getbase.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/add_list"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:fab_icon="@drawable/ic_fab_star"
-                    app:fab_colorNormal="@color/accent"
-                    app:fab_colorPressed="@color/accent_light"
-                    app:fab_title="Список"
                     app:fab_size="mini">
             </com.getbase.floatingactionbutton.FloatingActionButton>
 

@@ -8,7 +8,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ProgressBar;
+import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.stenbergroom.keepra.app.adapter.Test_CustomAdapter;
 import com.stenbergroom.keepra.app.entity.Test_TaskInfo;
@@ -54,8 +56,16 @@ public class Test_MainActivity extends ActionBarActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setItemAnimator(new Test_CustomItemAnimator());
 
-        mAdapter = new Test_CustomAdapter(new ArrayList<Test_TaskInfo>(), R.layout.test_row_task, Test_MainActivity.this);
-        mRecyclerView.setAdapter(mAdapter);
+        final FloatingActionButton newTaskBtn = (FloatingActionButton)findViewById(R.id.new_task);
+        newTaskBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        //mAdapter = new Test_CustomAdapter(new ArrayList<Test_TaskInfo>(), R.layout.test_row_task, Test_MainActivity.this);
+        //mRecyclerView.setAdapter(mAdapter);
 
     }
 }

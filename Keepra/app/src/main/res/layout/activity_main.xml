@@ -75,7 +75,7 @@
                         android:scaleType="fitCenter">
 
                 <com.getbase.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/add_task"
+                        android:id="@+id/new_task"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:fab_icon="@drawable/ic_fab_star"
