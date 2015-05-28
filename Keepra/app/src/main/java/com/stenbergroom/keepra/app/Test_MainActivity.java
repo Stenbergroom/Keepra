@@ -1,6 +1,9 @@
 package com.stenbergroom.keepra.app;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -60,12 +63,17 @@ public class Test_MainActivity extends ActionBarActivity {
         newTaskBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startNewTaskActivity();
             }
         });
-
-        //mAdapter = new Test_CustomAdapter(new ArrayList<Test_TaskInfo>(), R.layout.test_row_task, Test_MainActivity.this);
-        //mRecyclerView.setAdapter(mAdapter);
-
     }
+
+    private void startNewTaskActivity(){
+        Intent intent = new Intent(getApplicationContext(), Test_NewTaskActivity.class);
+        ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(this, Pair.create((View) fabMenu, "fab"));
+        startActivity(intent, transitionActivityOptions.toBundle());
+    }
+
+    //mAdapter = new Test_CustomAdapter(new ArrayList<Test_TaskInfo>(), R.layout.test_row_task, Test_MainActivity.this);
+    //mRecyclerView.setAdapter(mAdapter);
 }

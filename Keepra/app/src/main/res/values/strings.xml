@@ -6,6 +6,7 @@
     <string name="drawer_close">Slider Closed</string>
     <string name="action_settings">Settings</string>
     <string name="activity_detail_title">Detail Activity</string>
+    <string name="activity_new_task_title">Test_NewTaskActivity</string>
 
     <string name="drawer_switch">SwitchSample</string>
     <string name="drawer_opensource">Open Source</string>

@@ -17,6 +17,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+                android:name=".Test_NewTaskActivity"
+                android:label="@string/activity_new_task_title">
+        </activity>
+
         <!--<activity
                 android:name=".DetailActivity"
                 android:label="@string/activity_detail_title">

@@ -16,7 +16,6 @@
 
         <TextView
                 android:id="@+id/task_time"
-                android:transitionName="appIcon"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -29,7 +28,6 @@
 
         <TextView
                 android:id="@+id/task_date"
-                android:transitionName="appIcon"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:gravity="center"
