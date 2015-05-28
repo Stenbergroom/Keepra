@@ -64,6 +64,7 @@ public class Test_MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 startNewTaskActivity();
+                fabMenu.collapse();
             }
         });
     }
