@@ -3,6 +3,7 @@ package com.stenbergroom.keepra.app;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 /**
  * Created by Sten on 27.05.2015.
@@ -21,7 +22,12 @@ public class Test_NewTaskActivity extends ActionBarActivity{
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //TODO Add Listener for back pressed
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Test_NewTaskActivity.this.onBackPressed();
+            }
+        });
 
     }
 }
