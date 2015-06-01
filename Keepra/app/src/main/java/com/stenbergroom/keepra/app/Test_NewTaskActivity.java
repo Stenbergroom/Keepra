@@ -47,8 +47,8 @@ public class Test_NewTaskActivity extends ActionBarActivity{
         view = rowContainer.findViewById(R.id.row_task_description);
         fillRow(view, "Task Description", "Description");
 
-        view = rowContainer.findViewById(R.id.row_task_status);
-        fillRow(view, "Task Status", "Status");
+        //view = rowContainer.findViewById(R.id.row_task_status);
+        //fillRow(view, "Task Status", "Status");
 
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
