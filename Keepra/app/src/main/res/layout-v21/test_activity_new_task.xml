@@ -53,7 +53,7 @@
     </ScrollView>
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
-            android:id="@+id/fab_button"
+            android:id="@+id/fab_menu"
             android:transitionName="fab"
             android:layout_width="@dimen/fab_size"
             android:layout_height="@dimen/fab_size"

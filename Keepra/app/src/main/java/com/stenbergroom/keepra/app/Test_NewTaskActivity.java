@@ -10,6 +10,7 @@ import android.view.ViewPropertyAnimator;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 /**
  * Created by Sten on 27.05.2015.
@@ -20,6 +21,7 @@ public class Test_NewTaskActivity extends ActionBarActivity{
 
     private Toolbar toolbar;
     private LinearLayout rowContainer;
+    private FloatingActionsMenu fabMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class Test_NewTaskActivity extends ActionBarActivity{
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        fabMenu = (FloatingActionsMenu)findViewById(R.id.fab_menu);
         rowContainer = (LinearLayout)findViewById(R.id.row_container);
 
         for(int i = 0; i < rowContainer.getChildCount(); i++){
@@ -57,6 +60,7 @@ public class Test_NewTaskActivity extends ActionBarActivity{
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                fabMenu.collapse();
                 Test_NewTaskActivity.this.onBackPressed();
             }
         });
@@ -102,7 +106,8 @@ public class Test_NewTaskActivity extends ActionBarActivity{
                 }
             });
         }
+        fabMenu.collapse();
     }
 
-    //TODO Add Circular Progress Button And collapse fab menu after backpressed
+    //TODO Add Circular Progress Button
 }
