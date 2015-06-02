@@ -166,6 +166,4 @@ public class Test_NewTaskActivity extends ActionBarActivity{
         widthAnimation.start();
     }
 
-
-    //TODO Add Circular Progress Button
 }
