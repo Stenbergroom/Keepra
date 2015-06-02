@@ -49,6 +49,10 @@
                     android:id="@+id/row_task_date"
                     layout="@layout/test_row_new_task">
             </include>
+            <include
+                    android:id="@+id/row_circular_button"
+                    layout="@layout/test_row_circular_button">
+            </include>
         </LinearLayout>
     </ScrollView>
 

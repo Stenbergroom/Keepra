@@ -1,15 +1,18 @@
 package com.stenbergroom.keepra.app;
 
 import android.animation.Animator;
+import android.animation.ValueAnimator;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewPropertyAnimator;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import com.dd.CircularProgressButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 /**
@@ -35,6 +38,29 @@ public class Test_NewTaskActivity extends ActionBarActivity{
 
         fabMenu = (FloatingActionsMenu)findViewById(R.id.fab_menu);
         rowContainer = (LinearLayout)findViewById(R.id.row_container);
+        final CircularProgressButton circularButton1 = (CircularProgressButton)findViewById(R.id.circularButton1);
+        circularButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (circularButton1.getProgress() == 0) {
+                    simulateSuccessProgress(circularButton1);
+                } else {
+                    circularButton1.setProgress(0);
+                }
+            }
+        });
+
+        final CircularProgressButton circularButton2 = (CircularProgressButton)findViewById(R.id.circularButton2);
+        circularButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(circularButton2.getProgress() == 0){
+                    simulateErrorProgress(circularButton2);
+                }else{
+                    circularButton2.setProgress(0);
+                }
+            }
+        });
 
         for(int i = 0; i < rowContainer.getChildCount(); i++){
             View rowView = rowContainer.getChildAt(i);
@@ -108,6 +134,38 @@ public class Test_NewTaskActivity extends ActionBarActivity{
         }
         fabMenu.collapse();
     }
+
+    private void simulateSuccessProgress(final CircularProgressButton button){
+        ValueAnimator widthAnimation = ValueAnimator.ofInt(1, 100);
+        widthAnimation.setDuration(1500);
+        widthAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+        widthAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                Integer value = (Integer) animation.getAnimatedValue();
+                button.setProgress(value);
+            }
+        });
+        widthAnimation.start();
+    }
+
+    private void simulateErrorProgress(final CircularProgressButton button){
+        ValueAnimator widthAnimation = ValueAnimator.ofInt(1, 99);
+        widthAnimation.setDuration(1500);
+        widthAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+        widthAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                Integer value = (Integer) animation.getAnimatedValue();
+                button.setProgress(value);
+                if(value == 99){
+                    button.setProgress(-1);
+                }
+            }
+        });
+        widthAnimation.start();
+    }
+
 
     //TODO Add Circular Progress Button
 }

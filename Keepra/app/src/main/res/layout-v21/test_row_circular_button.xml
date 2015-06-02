@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="32dp"
+              android:gravity="center_horizontal">
+
+    <com.dd.CircularProgressButton
+            android:id="@+id/circularButton1"
+            android:layout_width="196dp"
+            android:layout_height="64dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            app:cpb_textComplete="Complete"
+            app:cpb_textError="Error"
+            app:cpb_textIdle="Upload">
+    </com.dd.CircularProgressButton>
+
+    <com.dd.CircularProgressButton
+            android:id="@+id/circularButton2"
+            android:layout_width="196dp"
+            android:layout_height="64dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            app:cpb_textComplete="Complete"
+            app:cpb_textError="Error"
+            app:cpb_textIdle="Upload">
+    </com.dd.CircularProgressButton>
+
+</LinearLayout>
